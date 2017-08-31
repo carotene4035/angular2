@@ -1,13 +1,5 @@
 <h1>{{title}}</h1>
 
-<div><label for="">id: </label>{{task.id}}</div>
-<div><label for="">name: </label>{{task.name}}</div>
-
-<div>
-  <label> name: </label>
-  <input [(ngModel)]="task.name" placeholder="name">
-</div>
-
 <ul class="tasks">
   <li *ngFor="let task of tasks" (click)="onSelect(task)" [class.selected]="task === selectedTask">
     <span class="badge">{{task.id}}</span> {{task.name}}
