@@ -10,7 +10,7 @@ import { Task } from  '../task';
 
 export class TasksComponent implements OnInit {
 
-  private tasks = [];
+  private tasks: Task[] = [];
   private selectedTask: Task;
 
   constructor(private taskService: TaskService) {}

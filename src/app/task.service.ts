@@ -13,4 +13,8 @@ export class TaskService {
 
   constructor() { }
 
+  public getTask(id: number): Promise<Task> {
+    return this.getTasks().then(tasks => tasks.find(task => task.id === id));
+
+  }
 }
